@@ -1,0 +1,278 @@
+@keyframes revolve {
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.universe{
+    width: 100vw;
+    height: 100vh;
+    filter: blur(0.5px);
+    background-image: url(Universe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: linear-gradient(#3e4947, #424d5b); */
+    position: fixed;
+    display: grid;
+    grid-template-rows: 10px 1fr 300px;
+    grid-template-columns: 10px 1fr 10px;
+
+}
+.sun{
+    grid-row-start: 2;
+    grid-column-start: 2;
+    place-self: center;
+    width: 100px;
+    height:100px;
+    border-radius:50%;
+    background-color: orange;
+    box-shadow: 0 0 35px 5px yellow,0 0 25px 10px yellow inset;
+}
+.mercury-orbit{
+    place-self: center;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    border: 2px dotted whitesmoke;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display:flex;
+    align-items: center;
+    animation: revolve 7s infinite linear;
+}
+.mercury{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    left: -12.5px;
+    border-radius:50%;
+    background-color: #515055;
+    box-shadow: 0 0 35px 5px #c4c3c0,0 0 25px 10px #c4c3c0 inset;
+}
+.venus-orbit{
+    place-self: center;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    border: 2px dotted whitesmoke;
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    display:flex;
+    align-items: center;
+    animation: revolve 9s infinite linear;
+}
+.venus{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    left: 21px;
+    top: -97px;
+    border-radius:50%;
+    background-color: #b17d2c;
+    box-shadow: 0 0 35px 5px #fede81,0 0 25px 10px #fede81 inset;
+}
+.earth-orbit{
+    place-self: center;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    border: 2px dotted whitesmoke;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    display:flex;
+    align-items: center;
+    animation: revolve 11s infinite linear;
+}
+.earth{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    left: -34px;
+    top: 130px;
+    border-radius:50%;
+    background: url(Earth1.avif);
+    box-shadow: 0 0 35px 5px #62a4d2,0 0 25px 10px #62a4d2 inset;
+}
+.moon-orbit{
+    position: relative;
+    left: 17.95px;
+    top: 130px;
+    border: 0.5px dotted whitesmoke;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: revolve 7s infinite linear;
+}
+.moon{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    left: 9.5px;
+    border-radius:50%;
+    background-color: #515055;
+    box-shadow: 0 0 35px 5px #c4c3c0,0 0 25px 10px #c4c3c0 inset;
+}
+.mars-orbit{
+    place-self: center;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    border: 2px dotted whitesmoke;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    display:flex;
+    align-items: center;
+    animation: revolve 8s infinite linear;
+}
+.mars{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    left: -1.5px;
+    top: -86px;
+    border-radius:50%;
+    background-color: #a95139;
+    box-shadow: 0 0 35px 5px #ec895e,0 0 25px 10px #ec895e inset;
+}
+.jupiter-orbit{
+    place-self: center;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    border: 2px dotted whitesmoke;
+    border-radius: 50%;
+    width: 700px;
+    height: 700px;
+    display:flex;
+    align-items: center;
+    animation: revolve 18s infinite linear;
+}
+.jupiter{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 597.5px;
+    top: -177px;
+    border-radius:50%;
+    background: linear-gradient(#a98457, #d6ad7a, #eac699);
+    box-shadow: 0 0 35px 5px #d3bb9d,0 0 25px 10px #d3bb9d inset;
+}
+.saturn-orbit{
+    place-self: center;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    border: 2px dotted whitesmoke;
+    border-radius: 50%;
+    width: 850px;
+    height: 850px;
+    display:flex;
+    align-items: center;
+    animation: revolve 18s infinite linear;
+}
+.planet{
+    position: relative;
+    top: 378px;
+    left: 544px;
+    width: 150px;
+    height: 150px;
+    display: grid;
+    grid-template-rows: 2px 1fr 2px;
+    grid-template-columns: 2px 1fr 2px;
+}
+.ring1{
+    grid-row-start: 2;
+    grid-column-start: 2;
+    place-self: center;
+    border: 6px solid #ddd3c7;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    transform: rotate3d(1,1.5,1,177deg);
+
+}
+.ring2{
+    grid-row-start: 2;
+    grid-column-start: 2;
+    place-self: center;
+    border: 6px solid #9d8b75;
+    border-radius: 50%;
+    width: 86px;
+    height: 86px;
+    transform: rotate3d(1,1.5,1,177deg);
+
+}
+.ring3{
+    grid-row-start: 2;
+    grid-column-start: 2;
+    place-self: center;
+    border: 6px solid #ddd3c7;
+    border-radius: 50%;
+    width: 92px;
+    height: 92px;
+    transform: rotate3d(1,1.5,1,177deg);
+
+}
+.saturn{
+    z-index: 5;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    place-self: center;
+    width: 70px;
+    height: 70px;
+    border-radius:50%;
+    background: linear-gradient(#9a865b, #a09265,#d2c48f, #d2c48f);
+    box-shadow: 0 0 35px 5px #c6bb8f,0 0 25px 10px #c6bb8f inset;
+}
+.uranus-orbit{
+    place-self: center;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    border: 2px dotted whitesmoke;
+    border-radius: 50%;
+    width: 1000px;
+    height: 1000px;
+    display:flex;
+    align-items: center;
+    animation: revolve 18s infinite linear;
+}
+.uranus{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    left: 239.5px;
+    top: -442px;
+    border-radius:50%;
+    background-color: #4894cd;
+    box-shadow: 0 0 35px 5px #4bafdf,0 0 25px 10px #4bafdf inset;
+}
+.neptune-orbit{
+    place-self: center;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    border: 2px dotted whitesmoke;
+    border-radius: 50%;
+    width: 1180px;
+    height: 1180px;
+    display:flex;
+    align-items: center;
+    animation: revolve 18s infinite linear;
+}
+.neptune{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    left: 181.5px;
+    top: 456px;
+    border-radius:50%;
+    background-color: #293791;
+    box-shadow: 0 0 35px 5px #486eff,0 0 25px 10px #486eff inset;
+}
